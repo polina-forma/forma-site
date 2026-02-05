@@ -1,0 +1,136 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2a37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="lightGradient">
+      <stop offset="0%" style="stop-color:#f4c430;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e5b820;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles in background -->
+  <circle cx="80" cy="80" r="60" fill="#0d9488" opacity="0.08"/>
+  <circle cx="550" cy="380" r="80" fill="#f4c430" opacity="0.06"/>
+  <circle cx="500" cy="100" r="40" fill="#e5e7eb" opacity="0.04"/>
+  
+  <!-- Left side: Open book representation -->
+  <g id="book">
+    <!-- Book spine (center line) -->
+    <line x1="180" y1="120" x2="180" y2="330" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Left page -->
+    <path d="M 180 120 L 100 140 L 100 310 L 180 330 Z" fill="#0d9488" stroke="#f4c430" stroke-width="2"/>
+    
+    <!-- Right page -->
+    <path d="M 180 120 L 260 140 L 260 310 L 180 330 Z" fill="#059669" stroke="#f4c430" stroke-width="2"/>
+    
+    <!-- Page detail lines - left -->
+    <line x1="115" y1="165" x2="155" y2="165" stroke="#e5e7eb" stroke-width="1.5" opacity="0.6"/>
+    <line x1="115" y1="190" x2="160" y2="190" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="115" y1="215" x2="155" y2="215" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="115" y1="240" x2="158" y2="240" stroke="#e5e7eb" stroke-width="1.5" opacity="0.6"/>
+    <line x1="115" y1="265" x2="152" y2="265" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="115" y1="290" x2="160" y2="290" stroke="#e5e7eb" stroke-width="1.5" opacity="0.4"/>
+    
+    <!-- Page detail lines - right -->
+    <line x1="200" y1="165" x2="240" y2="165" stroke="#e5e7eb" stroke-width="1.5" opacity="0.6"/>
+    <line x1="200" y1="190" x2="245" y2="190" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="200" y1="215" x2="240" y2="215" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="200" y1="240" x2="247" y2="240" stroke="#e5e7eb" stroke-width="1.5" opacity="0.6"/>
+    <line x1="200" y1="265" x2="241" y2="265" stroke="#e5e7eb" stroke-width="1.5" opacity="0.5"/>
+    <line x1="200" y1="290" x2="245" y2="290" stroke="#e5e7eb" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Center: Lightbulb with glow -->
+  <g id="lightbulb">
+    <!-- Glow effect -->
+    <circle cx="350" cy="200" r="70" fill="#f4c430" opacity="0.1"/>
+    <circle cx="350" cy="200" r="50" fill="#f4c430" opacity="0.15"/>
+    
+    <!-- Bulb -->
+    <circle cx="350" cy="180" r="35" fill="url(#lightGradient)" stroke="#f4c430" stroke-width="2"/>
+    
+    <!-- Inner glow -->
+    <circle cx="350" cy="180" r="28" fill="#ffd700" opacity="0.3"/>
+    
+    <!-- Base/neck -->
+    <rect x="340" y="215" width="20" height="25" fill="#f4c430" rx="2"/>
+    
+    <!-- Screw threads -->
+    <circle cx="350" cy="245" r="12" fill="#e5e7eb" stroke="#f4c430" stroke-width="1"/>
+    <line x1="342" y1="245" x2="358" y2="245" stroke="#f4c430" stroke-width="1"/>
+    <line x1="345" y1="242" x2="355" y2="248" stroke="#f4c430" stroke-width="1"/>
+  </g>
+  
+  <!-- Right side: Network nodes and connections -->
+  <g id="network">
+    <!-- Connection lines -->
+    <line x1="420" y1="140" x2="500" y2="100" stroke="#0d9488" stroke-width="2" opacity="0.6"/>
+    <line x1="420" y1="140" x2="520" y2="180" stroke="#0d9488" stroke-width="2" opacity="0.6"/>
+    <line x1="420" y1="140" x2="480" y2="240" stroke="#0d9488" stroke-width="2" opacity="0.5"/>
+    <line x1="420" y1="200" x2="510" y2="260" stroke="#0d9488" stroke-width="2" opacity="0.5"/>
+    <line x1="420" y1="200" x2="500" y2="300" stroke="#0d9488" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Central node -->
+    <circle cx="420" cy="170" r="18" fill="#f4c430" stroke="#f4c430" stroke-width="2"/>
+    <circle cx="420" cy="170" r="12" fill="#fff8e7" opacity="0.8"/>
+    
+    <!-- Outer nodes -->
+    <circle cx="500" cy="100" r="14" fill="#0d9488" stroke="#f4c430" stroke-width="1.5"/>
+    <circle cx="500" cy="100" r="8" fill="#e5e7eb" opacity="0.7"/>
+    
+    <circle cx="520" cy="180" r="14" fill="#0d9488" stroke="#f4c430" stroke-width="1.5"/>
+    <circle cx="520" cy="180" r="8" fill="#e5e7eb" opacity="0.7"/>
+    
+    <circle cx="480" cy="240" r="14" fill="#0d9488" stroke="#f4c430" stroke-width="1.5"/>
+    <circle cx="480" cy="240" r="8" fill="#e5e7eb" opacity="0.7"/>
+    
+    <circle cx="510" cy="260" r="14" fill="#0d9488" stroke="#f4c430" stroke-width="1.5"/>
+    <circle cx="510" cy="260" r="8" fill="#e5e7eb" opacity="0.7"/>
+    
+    <circle cx="500" cy="300" r="14" fill="#0d9488" stroke="#f4c430" stroke-width="1.5"/>
+    <circle cx="500" cy="300" r="8" fill="#e5e7eb" opacity="0.7"/>
+  </g>
+  
+  <!-- Bottom section: People silhouettes suggesting collaboration -->
+  <g id="people">
+    <!-- Person 1 -->
+    <circle cx="280" cy="355" r="10" fill="#f4c430"/>
+    <path d="M 270 375 L 290 375 L 290 400 L 275 400 L 275 385 L 285 385 L 285 400" fill="#0d9488"/>
+    
+    <!-- Person 2 -->
+    <circle cx="330" cy="355" r="10" fill="#f4c430"/>
+    <path d="M 320 375 L 340 375 L 340 400 L 325 400 L 325 385 L 335 385 L 335 400" fill="#0d9488"/>
+    
+    <!-- Person 3 -->
+    <circle cx="380" cy="355" r="10" fill="#f4c430"/>
+    <path d="M 370 375 L 390 375 L 390 400 L 375 400 L 375 385 L 385 385 L 385 400" fill="#0d9488"/>
+    
+    <!-- Connection lines between people -->
+    <line x1="290" y1="360" x2="320" y2="360" stroke="#f4c430" stroke-width="1.5" opacity="0.5"/>
+    <line x1="340" y1="360" x2="370" y2="360" stroke="#f4c430" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  
+  <!-- Accent elements -->
+  <g id="accents">
+    <!-- Top right accent lines -->
+    <line x1="530" y1="50" x2="570" y2="50" stroke="#f4c430" stroke-width="2" opacity="0.4"/>
+    <line x1="540" y1="60" x2="580" y2="60" stroke="#0d9488" stroke-width="1.5" opacity="0.3"/>
+    
+    <!-- Bottom left accent -->
+    <line x1="30" y1="410" x2="70" y2="410" stroke="#f4c430" stroke-width="2" opacity="0.4"/>
+    <line x1="25" y1="425" x2="65" y2="425" stroke="#0d9488" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,111 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4c430;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e5a320;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a7a6f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="#f9fafb"/>
+
+  <!-- Connecting lines - abstract network effect -->
+  <line x1="80" y1="100" x2="180" y2="180" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="180" y1="180" x2="300" y2="150" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="300" y1="150" x2="420" y2="220" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="420" y1="220" x2="520" y2="140" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="300" y1="150" x2="240" y2="280" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+  <line x1="420" y1="220" x2="380" y2="340" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Connection nodes along lines -->
+  <circle cx="80" cy="100" r="4" fill="#0d9488" opacity="0.6"/>
+  <circle cx="180" cy="180" r="5" fill="#0d9488" opacity="0.8"/>
+  <circle cx="300" cy="150" r="6" fill="#0d9488"/>
+  <circle cx="420" cy="220" r="5" fill="#0d9488" opacity="0.8"/>
+  <circle cx="520" cy="140" r="4" fill="#0d9488" opacity="0.6"/>
+  <circle cx="240" cy="280" r="4" fill="#0d9488" opacity="0.6"/>
+  <circle cx="380" cy="340" r="4" fill="#0d9488" opacity="0.6"/>
+
+  <!-- Left envelope/message element -->
+  <g transform="translate(100, 260)">
+    <!-- Envelope body -->
+    <rect x="0" y="0" width="90" height="70" rx="4" fill="none" stroke="#f4c430" stroke-width="2.5"/>
+    <!-- Envelope flap -->
+    <path d="M 0 0 L 45 35 L 90 0" fill="none" stroke="#f4c430" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Inner letter lines -->
+    <line x1="15" y1="20" x2="75" y2="20" stroke="#1f2a37" stroke-width="1.5" opacity="0.4"/>
+    <line x1="15" y1="30" x2="75" y2="30" stroke="#1f2a37" stroke-width="1.5" opacity="0.4"/>
+    <line x1="15" y1="40" x2="60" y2="40" stroke="#1f2a37" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Center message bubble elements -->
+  <g transform="translate(280, 240)">
+    <!-- Large bubble background -->
+    <circle cx="0" cy="0" r="45" fill="#0d9488" opacity="0.08"/>
+    <!-- Message speech bubble -->
+    <path d="M -25 -20 Q -35 -20 -35 -10 L -35 15 Q -35 25 -25 25 L 25 25 Q 35 25 35 15 L 35 -10 Q 35 -20 25 -20 Z" 
+          fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Bubble pointer -->
+    <path d="M 20 25 L 30 40 L 25 25" fill="#0d9488" opacity="0.6"/>
+    <!-- Message lines inside -->
+    <line x1="-20" y1="-8" x2="20" y2="-8" stroke="#0d9488" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-20" y1="2" x2="20" y2="2" stroke="#0d9488" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-20" y1="12" x2="10" y2="12" stroke="#0d9488" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Right phone icon -->
+  <g transform="translate(450, 280)">
+    <!-- Phone body -->
+    <rect x="0" y="0" width="50" height="80" rx="6" fill="none" stroke="#f4c430" stroke-width="2.5"/>
+    <!-- Phone screen area -->
+    <rect x="6" y="8" width="38" height="56" rx="3" fill="none" stroke="#f4c430" stroke-width="1.5" opacity="0.6"/>
+    <!-- Phone speaker -->
+    <rect x="18" y="3" width="14" height="3" rx="1.5" fill="#f4c430" opacity="0.5"/>
+    <!-- Phone notification dots -->
+    <circle cx="15" cy="22" r="2.5" fill="#f4c430" opacity="0.7"/>
+    <circle cx="25" cy="22" r="2.5" fill="#f4c430" opacity="0.7"/>
+    <circle cx="35" cy="22" r="2.5" fill="#f4c430" opacity="0.7"/>
+    <!-- Signal lines -->
+    <path d="M 20 35 Q 30 35 30 25" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 15 38 Q 30 38 30 20" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Top right message dots (indicating multiple messages) -->
+  <g transform="translate(520, 90)">
+    <circle cx="0" cy="0" r="5" fill="#f4c430"/>
+    <circle cx="0" cy="16" r="5" fill="#f4c430" opacity="0.6"/>
+    <circle cx="0" cy="32" r="5" fill="#f4c430" opacity="0.3"/>
+  </g>
+
+  <!-- Left side decorative lines (reaching in) -->
+  <g opacity="0.5">
+    <path d="M 0 120 Q 40 130 60 140" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+    <path d="M 0 180 Q 40 185 60 190" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+    <path d="M 0 240 Q 40 240 60 240" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Right side decorative lines (reaching out) -->
+  <g opacity="0.5">
+    <path d="M 600 130 Q 560 135 540 145" fill="none" stroke="#f4c430" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+    <path d="M 600 190 Q 560 190 540 190" fill="none" stroke="#f4c430" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+    <path d="M 600 250 Q 560 255 540 270" fill="none" stroke="#f4c430" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+  </g>
+
+  <!-- Bottom accent - subtle pulse circle -->
+  <circle cx="300" cy="420" r="35" fill="none" stroke="#1f2a37" stroke-width="1" opacity="0.2"/>
+  <circle cx="300" cy="420" r="25" fill="none" stroke="#1f2a37" stroke-width="1" opacity="0.1"/>
+
+  <!-- Top center - connected rings (abstract connection) -->
+  <g transform="translate(300, 60)" opacity="0.8">
+    <circle cx="-15" cy="0" r="8" fill="none" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="15" cy="0" r="8" fill="none" stroke="#f4c430" stroke-width="2"/>
+    <line x1="-7" y1="0" x2="7" y2="0" stroke="#1f2a37" stroke-width="1.5" opacity="0.3"/>
+  </g>
+</svg>
