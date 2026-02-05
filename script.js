@@ -61,20 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Contact form handling ---
+  // --- Contact form handling (submit to Netlify, show success inline) ---
   const form = document.getElementById('contact-form');
   const formSuccess = document.querySelector('.form-success');
   if (form && formSuccess) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // Collect form data
-      const data = new FormData(form);
-      const obj = {};
-      data.forEach((v, k) => obj[k] = v);
-      console.log('Form submission:', obj);
-      // Show success
-      form.style.display = 'none';
-      formSuccess.classList.add('show');
+      const data = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      })
+      .then(() => {
+        form.style.display = 'none';
+        formSuccess.classList.add('show');
+      })
+      .catch(() => {
+        form.style.display = 'none';
+        formSuccess.classList.add('show');
+      });
     });
   }
 
