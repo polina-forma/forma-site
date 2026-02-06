@@ -23,7 +23,7 @@
           </div>
         </div>
         <a href="../contact.html">Contact</a>
-        <a href="../contact.html#form" class="btn btn-primary nav-cta">Get Started</a>
+        <a href="#lead-form" class="btn btn-primary nav-cta">Get My Automation Plan</a>
       </nav>
       <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -37,7 +37,7 @@
         <a href="training.html">Training &amp; Education</a>
       </div>
       <a href="../contact.html">Contact</a>
-      <a href="../contact.html#form" class="btn btn-primary">Get Started</a>
+      <a href="#lead-form" class="btn btn-primary">Get My Automation Plan</a>
     </div>
   </header>
 
@@ -46,7 +46,10 @@
       <div>
         <h1>Automate Your Sales Pipeline</h1>
         <p class="hero-sub">Capture leads, qualify faster, and follow up automatically.</p>
-        <a href="../contact.html#form" class="btn btn-primary">Get a free consult</a>
+        <div class="hero-cta-wrap">
+          <a href="#lead-form" class="btn btn-primary">Get My Personalized Automation Plan</a>
+          <span class="cta-microcopy">Free. No long-term contracts.</span>
+        </div>
       </div>
       <img src="../images/hero-sales.svg" alt="Sales pipeline automation illustration" class="hero-image">
     </div>
@@ -87,8 +90,46 @@
 
   <section class="cta-banner">
     <div class="container">
-      <h2>Ready to automate your business?</h2>
-      <a href="../contact.html#form" class="btn btn-primary">Contact Forma</a>
+      <h2>Ready to automate your sales?</h2>
+      <div class="cta-buttons">
+        <a href="#lead-form" class="btn btn-primary">Get My Personalized Automation Plan</a>
+        <a href="../contact.html" class="btn btn-secondary">Book a Free Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD CAPTURE -->
+  <section class="lead-capture" id="lead-form">
+    <div class="container">
+      <h2>Get your personalized automation plan</h2>
+      <p class="lead-capture-sub">Tell us about your business. We'll send you a custom plan within 1 business day.</p>
+      <form class="lead-form" name="lead-capture-sales" method="POST" data-netlify="true" novalidate>
+        <input type="hidden" name="form-name" value="lead-capture-sales">
+        <input type="hidden" name="source-page" value="Sales Automation">
+        <div class="lead-form-fields">
+          <div class="form-group">
+            <label for="lc-name">Name</label>
+            <input type="text" id="lc-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="lc-email">Email</label>
+            <input type="email" id="lc-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="lc-phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="lc-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-group form-group-wide">
+            <label for="lc-automate">What do you want to automate?</label>
+            <textarea id="lc-automate" name="automate" rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send My Request</button>
+        <p class="form-consent">No spam. No long-term contracts.</p>
+      </form>
+      <div class="form-success" role="alert">
+        <strong>Got it!</strong> I'll reach out within 1 business day.
+      </div>
     </div>
   </section>
 

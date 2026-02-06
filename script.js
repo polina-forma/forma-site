@@ -1,5 +1,5 @@
 /* ============================================
-   Forma Consulting — Site Scripts
+   Forma Consulting — Site Scripts v2
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Contact form handling (submit to Netlify, show success inline) ---
-  const form = document.getElementById('contact-form');
-  const formSuccess = document.querySelector('.form-success');
-  if (form && formSuccess) {
+  // --- Generic form handler (works for contact form + all lead-capture forms) ---
+  function handleNetlifyForm(form) {
+    const successEl = form.parentElement.querySelector('.form-success')
+                   || form.closest('section').querySelector('.form-success');
+    if (!successEl) return;
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = new URLSearchParams(new FormData(form)).toString();
@@ -75,20 +77,44 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(() => {
         form.style.display = 'none';
-        formSuccess.classList.add('show');
+        successEl.classList.add('show');
       })
       .catch(() => {
         form.style.display = 'none';
-        formSuccess.classList.add('show');
+        successEl.classList.add('show');
       });
     });
   }
+
+  // Attach handler to contact form
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) handleNetlifyForm(contactForm);
+
+  // Attach handler to all lead-capture forms
+  document.querySelectorAll('.lead-form').forEach(handleNetlifyForm);
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Close mobile nav if open
+        if (mobileNav && mobileNav.classList.contains('open')) {
+          hamburger.classList.remove('open');
+          mobileNav.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  });
 
   // --- Active page highlighting ---
   const currentPath = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
   document.querySelectorAll('.nav-links a, .dropdown-menu a').forEach(link => {
     const href = link.getAttribute('href');
-    if (!href) return;
+    if (!href || href.startsWith('#')) return;
     const linkPath = href.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
     if (linkPath === currentPath || (currentPath.startsWith('/services/') && linkPath.startsWith('/services/'))) {
       link.classList.add('active');
