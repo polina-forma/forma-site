@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forma Consulting — AI Strategy & Automation for Growing Businesses</title>
-  <meta name="description" content="We help established businesses implement AI where it matters — automating operations, eliminating manual work, and building systems that scale.">
-  <meta property="og:title" content="Forma Consulting — AI Strategy & Automation for Growing Businesses">
-  <meta property="og:description" content="We help established businesses implement AI where it matters — automating operations, eliminating manual work, and building systems that scale.">
+  <title>Forma Consulting — Set Up the Systems. Run the Business.</title>
+  <meta name="description" content="Forma helps small businesses build the systems they actually need — website, social, CRM, automations. Modern tools, scoped projects, no monthly retainers.">
+  <meta property="og:title" content="Forma Consulting — Set Up the Systems. Run the Business.">
+  <meta property="og:description" content="Forma helps small businesses build the systems they actually need — website, social, CRM, automations. Modern tools, scoped projects, no monthly retainers.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://forma.consulting">
   <meta property="og:image" content="https://forma.consulting/forma-og-image.png">
@@ -25,9 +25,9 @@
       --text-on-light: #1E293B;
       --text-muted-dark: #94A3B8;
       --text-muted-light: #64748B;
-      --accent: #D97706;
-      --accent-hover: #B45309;
-      --accent-light: rgba(217, 119, 6, 0.1);
+      --accent: #EC4899;
+      --accent-hover: #DB2777;
+      --accent-light: rgba(236, 72, 153, 0.1);
       --blue: #0EA5E9;
       --max-width: 1100px;
       --section-padding: 100px;
@@ -94,7 +94,7 @@
 
     .nav-cta {
       background: var(--accent) !important;
-      color: var(--dark) !important;
+      color: white !important;
       padding: 10px 24px;
       border-radius: 6px;
       font-weight: 600 !important;
@@ -137,7 +137,7 @@
       right: -20%;
       width: 800px;
       height: 800px;
-      background: radial-gradient(circle, rgba(217,119,6,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -171,7 +171,7 @@
     .hero p {
       font-size: 20px;
       color: var(--text-muted-dark);
-      max-width: 560px;
+      max-width: 620px;
       margin-bottom: 40px;
       line-height: 1.7;
     }
@@ -186,7 +186,7 @@
     .btn-primary {
       display: inline-block;
       background: var(--accent);
-      color: var(--dark);
+      color: white;
       padding: 16px 32px;
       border-radius: 6px;
       font-weight: 600;
@@ -242,6 +242,7 @@
       border: 1px solid var(--light-mid);
       border-radius: 12px;
       transition: border-color 0.2s, box-shadow 0.2s;
+      background: white;
     }
 
     .service-card:hover {
@@ -267,6 +268,128 @@
       font-size: 16px;
       color: var(--text-muted-light);
       line-height: 1.7;
+    }
+
+    /* WORK */
+    .work {
+      padding: var(--section-padding) 32px;
+      background: #F1F5F9;
+      border-top: 1px solid var(--light-mid);
+    }
+
+    .work-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .case-card {
+      padding: 40px;
+      background: white;
+      border: 1px solid var(--light-mid);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-number {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .case-tags span {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #334155;
+      background: rgba(15, 23, 42, 0.06);
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .case-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-on-light);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .case-intro {
+      font-size: 16px;
+      color: var(--text-muted-light);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .case-card h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-on-light);
+      margin-bottom: 12px;
+    }
+
+    .case-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+
+    .case-card li {
+      font-size: 15px;
+      color: var(--text-muted-light);
+      line-height: 1.6;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    .case-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 10px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .case-outcome {
+      padding: 18px 20px;
+      background: rgba(15, 23, 42, 0.05);
+      border-left: 3px solid #334155;
+      border-radius: 6px;
+      font-size: 15px;
+      color: var(--text-on-light);
+      line-height: 1.6;
+    }
+
+    .case-outcome strong {
+      color: #475569;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
     }
 
     /* PROCESS */
@@ -296,7 +419,7 @@
       font-size: 48px;
       font-weight: 700;
       color: var(--accent);
-      opacity: 0.3;
+      opacity: 0.4;
       line-height: 1;
       margin-bottom: 16px;
     }
@@ -368,28 +491,31 @@
 
     .about-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     .stat-item {
-      padding: 32px;
+      padding: 28px 32px;
       background: white;
       border-radius: 12px;
       border: 1px solid var(--light-mid);
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
 
     .stat-number {
-      font-size: 36px;
+      font-size: 40px;
       font-weight: 700;
-      color: var(--text-on-light);
+      color: var(--accent);
       line-height: 1;
-      margin-bottom: 8px;
+      min-width: 90px;
     }
 
     .stat-label {
-      font-size: 14px;
-      color: var(--text-muted-light);
+      font-size: 15px;
+      color: var(--text-on-light);
       line-height: 1.5;
     }
 
@@ -409,12 +535,12 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(217,119,6,0.05) 0%, transparent 50%, rgba(14,165,233,0.03) 100%);
+      background: linear-gradient(135deg, rgba(236,72,153,0.06) 0%, transparent 50%, rgba(14,165,233,0.03) 100%);
       pointer-events: none;
     }
 
     .cta-inner {
-      max-width: 640px;
+      max-width: 720px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -470,6 +596,7 @@
     .contact-subtitle {
       font-size: 17px;
       color: var(--text-muted-light);
+      line-height: 1.7;
       margin-bottom: 40px;
     }
 
@@ -524,7 +651,7 @@
 
     .form-submit button {
       background: var(--accent);
-      color: var(--dark);
+      color: white;
       padding: 16px 40px;
       border: none;
       border-radius: 6px;
@@ -587,6 +714,7 @@
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .services-grid { grid-template-columns: 1fr; }
+      .work-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: 1fr 1fr; }
       .process-step::after { display: none; }
       .about-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -613,9 +741,11 @@
       .hero h1 { font-size: 36px; }
       .hero p { font-size: 18px; }
       .process-grid { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr; }
+      .stat-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .stat-number { min-width: 0; }
       .form-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
+      .case-card { padding: 32px 28px; }
     }
   </style>
 </head>
@@ -630,6 +760,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -641,36 +772,28 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>AI Strategy &amp; Automation for Growing Businesses</h1>
-      <p>We help established businesses implement AI where it matters — automating operations, eliminating manual work, and building systems that scale.</p>
+      <h1>Set up the systems. Run the business.</h1>
+      <p>Website, social, CRM, automations — designed, built, and handed off. Scoped projects, not monthly retainers. Modern tools, AI where it helps, nothing you don't need.</p>
       <div class="hero-cta-group">
         <a href="#contact" class="btn-primary">Book a Strategy Call</a>
       </div>
-      <p class="hero-micro">No long-term contracts. Implementation that works.</p>
+      <p class="hero-micro">No long-term contracts. Real implementation. You own what we build.</p>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="services-inner">
-      <p class="section-label">What We Do</p>
+      <p class="section-label">What I Do</p>
       <h2 class="section-title">Services</h2>
       <div class="services-grid">
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
           </svg>
-          <h3>Strategy &amp; Assessment</h3>
-          <p>We audit your current operations and tech stack to identify the highest-impact opportunities for AI and automation. You get a clear, prioritized roadmap — not a slide deck full of theory.</p>
-        </div>
-
-        <div class="service-card">
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="4"/>
-          </svg>
-          <h3>Operations Automation</h3>
-          <p>We build systems that handle the repetitive work: client onboarding, scheduling, data entry, internal workflows, compliance tasks. Your team focuses on the work that requires judgment.</p>
+          <h3>Business Foundations</h3>
+          <p>Website, Google Business Profile, social accounts, Meta Business Suite. The baseline stack your business needs to operate online — set up correctly the first time, so you're not relearning it later.</p>
         </div>
 
         <div class="service-card">
@@ -678,16 +801,80 @@
             <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
           </svg>
           <h3>Marketing &amp; Sales Systems</h3>
-          <p>We design and implement automated lead capture, follow-up sequences, pipeline management, and reporting. Every touchpoint runs consistently without manual effort.</p>
+          <p>Strategy plus setup. CRM selection and configuration (HubSpot, GoHighLevel, or simpler tools when appropriate), sales funnels, content workflows, lead capture and follow-up. Designed to run after I'm gone — not hold you hostage to a retainer.</p>
         </div>
 
         <div class="service-card">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
           </svg>
-          <h3>Team Training &amp; Enablement</h3>
-          <p>We train your team to use AI tools confidently and effectively — not as a novelty, but as part of their daily workflow. Practical workshops. Ongoing support.</p>
+          <h3>Operational Consulting</h3>
+          <p>Ownership transitions, systems and tools audits, brand and operational alignment. For existing businesses that need to reset, upgrade, or hand off cleanly.</p>
         </div>
+
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="4"/>
+          </svg>
+          <h3>AI Tools &amp; Automation</h3>
+          <p>For clients ready to go deeper. AI tool selection, workflow design, agentic automations, custom builds when warranted. I'll tell you honestly where AI helps and where it's hype.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="work-inner">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Recent Projects</h2>
+      <div class="work-grid">
+
+        <article class="case-card">
+          <div class="case-number">01</div>
+          <div class="case-tags">
+            <span>Operational Consulting</span>
+            <span>Ownership Transition</span>
+            <span>Social Media Setup</span>
+          </div>
+          <h3>Yoga Studio, Alpharetta, GA</h3>
+          <p class="case-intro">A local yoga studio going through a change of ownership. The new owner inherited a business she believed in but had no documentation for — accounts she didn't have access to, a website on a platform nobody remembered choosing, and social media assets scattered across two people's logins.</p>
+          <h4>What I Did</h4>
+          <ul>
+            <li>Mapped the full operational stack the previous owner had been running</li>
+            <li>Transferred social media accounts and admin access to the new owner</li>
+            <li>Identified the website platform and set up access</li>
+            <li>Stood up a clean social media operation (Meta Business Suite, posting workflow, scheduling)</li>
+            <li>Consulted through the operational transition — on-site, in the studio</li>
+          </ul>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            The handoff between owners became an actual handoff, not a guessing game. The new owner runs the studio without relying on the former owner for basic operational questions.
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">02</div>
+          <div class="case-tags">
+            <span>AI Tools &amp; Automation</span>
+            <span>Operational Upgrade</span>
+            <span>Custom Build</span>
+          </div>
+          <h3>Little Sponges</h3>
+          <p class="case-intro">Natalia at Little Sponges came in with a messy HubSpot and a lot of questions about AI. What started as a CRM audit turned into a full operational upgrade.</p>
+          <h4>What I Did</h4>
+          <ul>
+            <li>Audited HubSpot and delivered a prioritized recommendations presentation</li>
+            <li>Migrated her daily workflow from ChatGPT to Claude, including Claude Code for agentic tasks</li>
+            <li>Set up a modern AI tool stack — ElevenLabs for voice, video generation tools, agentic workflow design</li>
+            <li>Designed and built a custom AI-powered Spanish learning app to demonstrate what's possible for her business</li>
+          </ul>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            Natalia is now running her AI-enabled operation herself. The consulting kick-started her technical fluency — which was the real goal.
+          </div>
+        </article>
 
       </div>
     </div>
@@ -696,28 +883,28 @@
   <!-- PROCESS -->
   <section class="process" id="process">
     <div class="process-inner">
-      <p class="section-label" style="color: var(--accent);">How We Work</p>
+      <p class="section-label" style="color: var(--accent);">How I Work</p>
       <h2 class="section-title">Process</h2>
       <div class="process-grid">
         <div class="process-step">
           <div class="step-number">01</div>
           <h3>Discovery</h3>
-          <p>We learn your business, map your workflows, and identify where time and money are being lost to manual processes.</p>
+          <p>Understand the business, map the workflows, and find where time and money are being lost.</p>
         </div>
         <div class="process-step">
           <div class="step-number">02</div>
-          <h3>Strategy</h3>
-          <p>We build a prioritized automation roadmap — what to implement first, what tools to use, and what outcomes to expect.</p>
+          <h3>Plan</h3>
+          <p>Scope the engagement, sequence the work, pick the tools, set expected outcomes. You see the plan before we build.</p>
         </div>
         <div class="process-step">
           <div class="step-number">03</div>
           <h3>Build</h3>
-          <p>We design, configure, and deploy your automations. Everything is tested in real conditions before going live.</p>
+          <p>Configure, set up, test — in real conditions, not a demo environment.</p>
         </div>
         <div class="process-step">
           <div class="step-number">04</div>
-          <h3>Optimize</h3>
-          <p>We monitor performance, refine what's working, and expand as your business grows. You're never left to figure it out alone.</p>
+          <h3>Handoff</h3>
+          <p>Training, documentation, access transfer. You run it from here. I'm available for scoped follow-ups, not recurring fees.</p>
         </div>
       </div>
     </div>
@@ -728,10 +915,10 @@
     <div class="about-inner">
       <div class="about-text">
         <p class="section-label">About</p>
-        <h2 class="section-title" style="margin-bottom: 32px;">Built on real business experience</h2>
-        <p><strong>Forma Consulting is led by Polina Denissova</strong> — a former corporate finance professional who understands how businesses actually operate, not just how they look on a pitch deck.</p>
-        <p>After years in finance, Polina built and runs a successful service-based business from the ground up. That experience — managing operations, marketing, client relationships, and growth — is the foundation of every engagement.</p>
-        <p>Forma exists because most businesses don't need more software. They need someone who understands their operations deeply enough to know where AI actually helps — and where it doesn't.</p>
+        <h2 class="section-title" style="margin-bottom: 32px;">Built by an operator, not a consultant.</h2>
+        <p>Forma is led by <strong>Polina Denissova</strong> — a former corporate finance professional who now runs Mindful Owl Yoga, a boutique yoga studio she built from the ground up.</p>
+        <p>That combination matters. I've read the financials and run the business. I've bought the software and written the onboarding emails and fixed the booking system at 9pm on a Saturday. That's why Forma exists — because most small businesses don't need another "strategy consultant." They need someone who knows what the day actually looks like, and where to start.</p>
+        <p>I work with small businesses on scoped projects: foundations, systems, strategy, and the AI and automation layers that actually help. I don't do monthly retainers and I don't do vanity decks. I set things up so you can run them.</p>
         <a href="https://www.linkedin.com/in/denissova/" class="about-link" target="_blank" rel="noopener">Connect on LinkedIn <span>→</span></a>
       </div>
       <div class="about-stats">
@@ -741,15 +928,11 @@
         </div>
         <div class="stat-item">
           <div class="stat-number">2</div>
-          <div class="stat-label">Businesses built from the ground up</div>
+          <div class="stat-label">Businesses built and operated from the ground up</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">100%</div>
-          <div class="stat-label">Implementation-focused engagements</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">0</div>
-          <div class="stat-label">Slide decks full of theory</div>
+          <div class="stat-label">Project-based engagements. No retainers.</div>
         </div>
       </div>
     </div>
@@ -758,7 +941,7 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="cta-inner">
-      <h2>Ready to stop doing manually what a system could handle?</h2>
+      <h2>Let's set up the systems so you can run the business.</h2>
       <div class="cta-buttons">
         <a href="#contact" class="btn-primary">Book a Strategy Call</a>
         <a href="#contact" class="btn-secondary">Get a Free Assessment</a>
@@ -770,8 +953,8 @@
   <section class="contact" id="contact">
     <div class="contact-inner">
       <p class="section-label">Contact</p>
-      <h2 class="section-title">Let's talk</h2>
-      <p class="contact-subtitle">Tell us about your business and what you're looking to automate. We'll follow up within one business day.</p>
+      <h2 class="section-title">Let's talk.</h2>
+      <p class="contact-subtitle">Most business owners don't know what they need to automate or fix — they know what's not working. Tell me about the business and where it's breaking down: bottlenecks, lost leads, reports that take hours, financials you can't see clearly. I'll figure out what to fix. You'll hear back within one business day.</p>
       <form name="contact" method="POST" data-netlify="true">
         <div class="form-grid">
           <div class="form-group">
@@ -791,7 +974,7 @@
             <input type="text" id="company" name="company">
           </div>
           <div class="form-group full-width">
-            <label for="message">What are you looking to automate or improve?</label>
+            <label for="message">What's not working, or what's taking too long?</label>
             <textarea id="message" name="message"></textarea>
           </div>
         </div>
