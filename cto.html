@@ -299,6 +299,25 @@
     .dot.g { background: #16A34A; } .dot.y { background: #EAB308; }
     .score-note { font-size: 14px; color: var(--text-muted-light); margin: 0 !important; }
     @media (max-width: 960px) { .work-grid, .faq.three { grid-template-columns: 1fr; } }
+
+    /* NAV v2: services dropdown */
+    .nav-links a, .menu-btn { white-space: nowrap; }
+    .has-menu { position: relative; }
+    .menu-btn { background: none; border: 0; color: var(--text-muted-dark); font: inherit; font-size: 15px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; }
+    .menu-btn:hover, .has-menu:focus-within .menu-btn, .menu-btn[aria-current="true"] { color: var(--text-on-dark); }
+    .menu-btn svg { width: 12px; height: 12px; }
+    .submenu { display: none; position: absolute; top: 100%; left: -16px; padding-top: 14px; }
+    .has-menu:hover .submenu, .has-menu:focus-within .submenu { display: block; }
+    .submenu ul { list-style: none; background: var(--dark-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px; min-width: 280px; box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+    .submenu a { display: block; padding: 10px 12px; border-radius: 6px; color: var(--text-on-dark) !important; font-size: 15px; }
+    .submenu a small { display: block; color: var(--text-muted-dark); font-size: 13px; margin-top: 2px; }
+    .submenu a:hover { background: rgba(255,255,255,0.06); }
+    @media (max-width: 720px) {
+      .nav-links.active .submenu { display: block; position: static; padding: 4px 0 0; }
+      .nav-links.active .submenu ul { background: none; border: 0; box-shadow: none; padding: 0 0 0 12px; min-width: 0; }
+    }
+    @media (max-width: 720px) { .nav-links.active { align-items: flex-start; } }
+    .case-card li:only-child { padding-left: 0; } .case-card li:only-child::before { display: none; }
   </style>
 </head>
 <body>
@@ -312,9 +331,16 @@
       </button>
       <ul class="nav-links">
         <li><a href="/studio">Forma Studio</a></li>
-        <li><a href="/cto" aria-current="page">Fractional CTO</a></li>
-        <li><a href="/#work">Work</a></li>
-        <li><a href="/#about">About</a></li>
+        <li class="has-menu">
+          <button class="menu-btn" aria-haspopup="true" aria-current="true">Services <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+          <div class="submenu">
+            <ul>
+              <li><a href="/cto" aria-current="page">Fractional CTO &amp; Managed Cloud<small>Servers, security, and tech leadership</small></a></li>
+              <li><a href="/#assistant">AI Booking Assistant<small>Answers clients on your website, 24/7</small></a></li>
+              <li><a href="/#websites">Custom Websites<small>Fast, custom-coded, yours</small></a></li>
+            </ul>
+          </div>
+        </li>
         <li><a href="#call" class="nav-cta">Book a Call</a></li>
       </ul>
     </div>
