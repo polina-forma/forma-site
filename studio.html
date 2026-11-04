@@ -232,6 +232,10 @@
     .form-submit button:hover { background: var(--accent-hover); }
     .form-note { margin-top: 12px; font-size: 13px; color: var(--text-muted-light); }
     .hidden { display: none; }
+    .demo-book { margin-top: 32px; }
+    .contact-title { font-size: 22px; font-weight: 600; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--light-mid); scroll-margin-top: 96px; }
+    .contact-lede { margin-top: 8px; font-size: 16px; color: var(--text-muted-light); line-height: 1.7; }
+    .contact-title + .contact-lede + form .form-grid { margin-top: 24px; }
 
     /* FOOTER (same as homepage) */
     footer { padding: 40px 32px; background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); }
@@ -306,7 +310,7 @@
             </ul>
           </div>
         </li>
-        <li><a href="#demo" class="nav-cta">Book a Demo</a></li>
+        <li><a href="https://calendar.app.google/4B3roxv2gDkjjVwS9" class="nav-cta" target="_blank" rel="noopener">Book a Demo</a></li>
       </ul>
     </div>
   </nav>
@@ -318,7 +322,7 @@
       <h1>Open-source studio management software. <span style="color:var(--accent)">Finally.</span></h1>
       <p class="sub">Free and flexible software for yoga studios, fitness studios, and gyms. AI-first, so you just ask and it does the work. Runs on your own website.</p>
       <div class="hero-ctas">
-        <a href="#demo" class="btn-primary">Book a Demo</a>
+        <a href="https://calendar.app.google/4B3roxv2gDkjjVwS9" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
         <a href="#tour" class="btn-ghost">See the software</a>
       </div>
       <p class="hero-micro">Built by a studio owner, for studio owners.</p>
@@ -544,28 +548,28 @@
           <h3>Self-host</h3>
           <p class="price">Free</p>
           <p>Download the code and run it on your own hosting. Full features, no license.</p>
-          <a href="#demo">Get notified at release →</a>
+          <a href="#contact">Get notified at release →</a>
         </div>
         <div class="path featured">
           <p class="path-tag">Most studios</p>
           <h3>Set up for you</h3>
           <p class="price">One-time setup</p>
           <p>I move your studio in and set it up on accounts in your name. You own all of it.</p>
-          <a href="#demo">Book a demo →</a>
+          <a href="https://calendar.app.google/4B3roxv2gDkjjVwS9" target="_blank" rel="noopener">Book a demo →</a>
         </div>
         <div class="path">
           <p class="path-tag">Ongoing help</p>
           <h3>Community</h3>
           <p class="price">$50 / month</p>
           <p>Private chat with other owners and me, office hours, and a monthly live call. Optional. Cancel anytime.</p>
-          <a href="#demo">Ask about it →</a>
+          <a href="#contact">Ask about it →</a>
         </div>
         <div class="path">
           <p class="path-tag">Built your way</p>
           <h3>Custom work</h3>
           <p class="price">Hourly</p>
           <p>A feature, integration, or change made for your studio. Billed by the hour, only when you need it.</p>
-          <a href="#demo">Tell me what you need →</a>
+          <a href="#contact">Tell me what you need →</a>
         </div>
       </div>
     </div>
@@ -630,6 +634,12 @@
       <p class="section-label">Book a demo</p>
       <h2 class="section-title">See it running on a real studio.</h2>
       <p class="section-lede">Thirty minutes over video. I'll walk you through the schedule, checkout, the sales board, and the assistant, and we'll talk about what moving your studio would take. Tell me what would stop you, too.</p>
+      <div class="demo-book">
+        <a href="https://calendar.app.google/4B3roxv2gDkjjVwS9" class="btn-primary" target="_blank" rel="noopener">Pick a time</a>
+        <p class="form-note">Opens my calendar. Choose a slot and you'll get a Google Meet invite.</p>
+      </div>
+      <h3 class="contact-title" id="contact">Rather send a message?</h3>
+      <p class="contact-lede">None of the times work, you have a question, or you want to hear when it's released. Write to me here.</p>
       <form name="studio-demo" method="POST" data-netlify="true" netlify-honeypot="company-website">
         <input type="hidden" name="form-name" value="studio-demo">
         <p class="hidden"><label>Leave this empty: <input name="company-website"></label></p>
@@ -651,12 +661,12 @@
             <input id="d-current" type="text" name="current_software" placeholder="Mindbody, Mariana Tek, Momence…">
           </div>
           <div class="form-group full-width">
-            <label for="d-msg">Anything else?</label>
-            <textarea id="d-msg" name="message" placeholder="What you'd want to see, or what would keep you from switching"></textarea>
+            <label for="d-msg">Message</label>
+            <textarea id="d-msg" name="message" placeholder="A time that works better for you, a question, or what would keep you from switching"></textarea>
           </div>
         </div>
-        <div class="form-submit"><button type="submit">Book a Demo</button></div>
-        <p class="form-note">You'll hear back within one business day to pick a time.</p>
+        <div class="form-submit"><button type="submit">Send Message</button></div>
+        <p class="form-note">You'll hear back within one business day.</p>
       </form>
     </div>
   </section>
