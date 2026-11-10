@@ -300,6 +300,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="/studio" aria-current="page">Forma Studio</a></li>
+        <li><a href="/studio/resources">Resources</a></li>
         <li class="has-menu">
           <button class="menu-btn" aria-haspopup="true">Services <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
           <div class="submenu">
@@ -385,12 +386,12 @@
         <div class="protect">
           <span class="num">4</span>
           <h3>The right keys for the right people</h3>
-          <p>Instructors see what instructors need. Money, exports and settings are for managers and owners only.</p>
+          <p>Instructors see what instructors need. Money, exports and settings are for managers and admins only.</p>
         </div>
         <div class="protect">
           <span class="num">5</span>
           <h3>A bouncer at the door</h3>
-          <p>Render absorbs attack floods automatically. Forma limits how fast anyone can request sign-in codes or use the assistant.</p>
+          <p>Render absorbs attack floods automatically. Forma limits how many sign-in codes anyone can request, how many guesses they get, and how heavily the assistant can be used.</p>
         </div>
         <div class="protect">
           <span class="num">6</span>
@@ -405,7 +406,7 @@
         <div class="protect">
           <span class="num">8</span>
           <h3>Rewind any mistake</h3>
-          <p>Your database can be rolled back to any minute in the last 7 days, so a bad day is undone instead of lost.</p>
+          <p>Your database can be rolled back to any point in the last 7 days, so a bad day is undone instead of lost.</p>
         </div>
       </div>
     </div>
@@ -422,7 +423,7 @@
       <div>
         <ol class="steps">
           <li><strong>Turn on 2-step verification for your email and your Render account.</strong>Sign-in codes go to your inbox, so your inbox is your key.</li>
-          <li><strong>Give each staff member the lowest role they need.</strong>Front desk doesn't need payroll.</li>
+          <li><strong>Give each staff member the lowest role they need.</strong>An instructor doesn't need refunds or settings.</li>
           <li><strong>Remove staff access the day someone leaves.</strong>It takes one click in Settings.</li>
         </ol>
         <p class="alert-note"><strong>If an alert arrives:</strong> forward it to your developer, paste it into an AI assistant, or send it to Forma for a paid review.</p>
@@ -447,15 +448,15 @@
             <tbody>
               <tr><td>Isolation</td><td>One Render workspace per studio, owned by the studio. Every setup is created from the same Blueprint (<code>render.yaml</code>), so they are identical and repeatable.</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
               <tr><td>Network</td><td>App reaches the database over Render's private network. External database access disabled at setup (it is open to any IP with the password by default).</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
-              <tr><td>Encryption</td><td>In transit: automatic TLS certificates; TLS required on database connections. At rest: AES-256 for the database, its backups and the disk. HSTS header.</td><td class="status"><span class="pill ok">Included</span><span class="pill wip">HSTS: building</span></td></tr>
+              <tr><td>Encryption</td><td>In transit: automatic TLS certificates, and an HSTS header so browsers only ever use https. At rest: AES-256 for the database and its backups.</td><td class="status"><span class="pill ok">Included</span></td></tr>
               <tr><td>Sign-in &amp; sessions</td><td>Passwordless: Google (OIDC + PKCE, verified email only) or emailed link + 6-digit code, stored hashed, single use, 15-min expiry, burned after 5 wrong guesses. Signed httpOnly/secure cookies; staff sessions 30 days, clients 180.</td><td class="status"><span class="pill ok">Built</span></td></tr>
-              <tr><td>Access</td><td>Server-enforced staff roles (admin, manager, front desk, instructor). Read-only database login for reports. App database role that cannot alter or drop tables.</td><td class="status"><span class="pill ok">Roles built</span><span class="pill wip">DB role: building</span></td></tr>
-              <tr><td>Attack protection</td><td>Render DDoS protection (Cloudflare network) on every web service. App-level rate limits on sign-in codes, the AI assistant and the API. Security headers (CSP, frame-ancestors 'none', nosniff, Referrer-Policy).</td><td class="status"><span class="pill ok">DDoS: included</span><span class="pill wip">Limits, headers: building</span></td></tr>
+              <tr><td>Access</td><td>Server-enforced staff roles (admin, manager, instructor), checked on every action. Read-only database login for reports. A separate front-desk role, custom roles, and an app database role that cannot alter or drop tables.</td><td class="status"><span class="pill ok">Roles built</span><span class="pill wip">Front desk, custom roles, DB role: building</span></td></tr>
+              <tr><td>Attack protection</td><td>Render DDoS protection (Cloudflare network) on every web service. App-level limits on sign-in emails (5 per account per 15 minutes), code guesses, new accounts and assistant use. Security headers (frame-ancestors 'none', nosniff, Referrer-Policy, HSTS). Limits on the API and a full script policy (CSP).</td><td class="status"><span class="pill ok">DDoS: included</span><span class="pill ok">Limits, headers: built</span><span class="pill wip">API limits, script policy: building</span></td></tr>
               <tr><td>Secrets</td><td>Keys stored as Render environment variables, never in code; repo history scanned clean. Email, AI and Stripe accounts are in the studio's name.</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
-              <tr><td>Backups</td><td>Database point-in-time recovery (7 days on Pro) plus on-demand exports. Photo disk snapshotted daily, kept 7 days.</td><td class="status"><span class="pill ok">Included</span></td></tr>
-              <tr><td>Alerts</td><td>Render emails the owner when a deploy fails, the app becomes unhealthy, or disk use passes 80%. Spending cap set on the AI key.</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
+              <tr><td>Backups</td><td>Database point-in-time recovery (7 days on Render's Pro workspace, the standard setup) plus on-demand exports. Photos are stored in the database, so the same backups cover them.</td><td class="status"><span class="pill ok">Included</span></td></tr>
+              <tr><td>Alerts</td><td>Render emails the owner when a deploy fails or the app becomes unhealthy. Spending cap set on the AI key.</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
               <tr><td>Account security</td><td>2-step login enforced for every member of the Render workspace. Forma's support access is a team seat the owner can remove at any time.</td><td class="status"><span class="pill ok">Standard setup</span></td></tr>
-              <tr><td>AI assistant</td><td>Every change needs a human Approve; full audit log. Google Gemini paid tier: prompts not used for training. Studio documents and waivers stored as text, not files.</td><td class="status"><span class="pill ok">Built</span></td></tr>
+              <tr><td>AI assistant</td><td>Every change needs a human Approve; full audit log; an hourly limit per staff member. Runs on the studio's own paid AI key (Anthropic Claude by default, Google Gemini optional): prompts not used for training. Studio documents and waivers stored as text, not files.</td><td class="status"><span class="pill ok">Built</span></td></tr>
               <tr><td>Payments</td><td>The studio's own Stripe account. No card numbers stored (brand, last 4, expiry only), keeping card handling within Stripe's PCI scope.</td><td class="status"><span class="pill ok">Built</span></td></tr>
             </tbody>
           </table>
