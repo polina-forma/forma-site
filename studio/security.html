@@ -10,6 +10,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://forma.consulting/studio/security">
   <meta property="og:image" content="https://forma.consulting/img/studio/admin-today.webp">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -294,20 +297,23 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="/" class="nav-logo">Forma Consulting</a>
+      <a href="/studio" class="nav-logo">Forma Studio</a>
       <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/studio" aria-current="page">Forma Studio</a></li>
-        <li><a href="/studio/resources">Resources</a></li>
+        <li><a href="/">Forma Consulting</a></li>
         <li class="has-menu">
-          <button class="menu-btn" aria-haspopup="true">Services <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
+          <button class="menu-btn" aria-haspopup="true" aria-current="true">Resources <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></button>
           <div class="submenu">
             <ul>
-              <li><a href="/cto">Fractional CTO &amp; Managed Cloud<small>Servers, security, and tech leadership</small></a></li>
-              <li><a href="/#assistant">AI Booking Assistant<small>Answers clients on your website, 24/7</small></a></li>
-              <li><a href="/#websites">Custom Websites<small>Fast, custom-coded, yours</small></a></li>
+              <li><a href="/studio/videos">Video walkthroughs<small>One-minute videos of everyday tasks</small></a></li>
+              <li><a href="/studio/how-it-runs">How it runs and what it costs<small>Where it lives and the monthly costs</small></a></li>
+              <li><a href="/studio/moving">Moving to Forma<small>The steps from first call to switch day</small></a></li>
+              <li><a href="/studio/accounts">Accounts to open<small>The accounts Forma runs on, in your name</small></a></li>
+              <li><a href="/studio/questions">Questions owners ask<small>Straight answers</small></a></li>
+              <li><a href="/studio/security" aria-current="page">Security<small>How your studio's data stays safe</small></a></li>
+              <li><a href="/studio/resources">All resources<small>Every guide in one place</small></a></li>
             </ul>
           </div>
         </li>
