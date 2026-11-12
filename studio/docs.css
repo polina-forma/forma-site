@@ -24,6 +24,33 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text-on-dark); margin: 6px 0; }
 
+.nav-links a, .menu-btn { white-space: nowrap; }
+.has-menu { position: relative; }
+.menu-btn { background: none; border: 0; color: var(--text-muted-dark); font: inherit; font-size: 15px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; }
+.menu-btn:hover, .has-menu:focus-within .menu-btn, .menu-btn[aria-current="true"] { color: var(--text-on-dark); }
+.menu-btn svg { width: 12px; height: 12px; }
+.submenu { display: none; position: absolute; top: 100%; left: -16px; padding-top: 14px; }
+.has-menu:hover .submenu, .has-menu:focus-within .submenu { display: block; }
+.submenu ul { list-style: none; background: var(--dark-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px; min-width: 300px; box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+.submenu a { display: block; padding: 10px 12px; border-radius: 6px; color: var(--text-on-dark) !important; font-size: 15px; }
+.submenu a small { display: block; color: var(--text-muted-dark); font-size: 13px; margin-top: 2px; }
+.submenu a:hover, .submenu a[aria-current="page"] { background: rgba(255,255,255,0.06); }
+
+/* VIDEO WALKTHROUGHS (/studio/videos) */
+.vgroup { margin-top: 56px; }
+.vgroup:first-child { margin-top: 0; }
+.vgroup h2 { font-size: clamp(24px, 3vw, 30px); font-weight: 700; margin: 0 0 6px; }
+.vgroup > p { color: var(--text-muted-light); font-size: 17px; margin: 0 0 20px; }
+.videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.videos.lead { grid-template-columns: 1fr; max-width: 760px; margin-top: 16px; }
+.video h3 { font-size: 18px; font-weight: 600; margin: 12px 0 4px; line-height: 1.3; }
+.video p { font-size: 15px; color: var(--text-muted-light); margin: 0; line-height: 1.5; }
+.vframe { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--dark); border: 1px solid var(--light-mid); }
+.vframe img, .vframe iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.vframe .play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: rgba(15,23,42,0.82); border: 2px solid rgba(255,255,255,0.9); transition: background 0.2s, transform 0.15s; }
+.vframe .play::after { content: ''; position: absolute; left: 25px; top: 19px; border-style: solid; border-width: 12px 0 12px 19px; border-color: transparent transparent transparent white; }
+.vframe:hover .play, .vframe:focus-visible .play { background: var(--accent); transform: scale(1.06); }
+
 /* HERO */
 .hero { background: var(--dark); padding: 152px 32px 72px; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: -40%; right: -20%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%); pointer-events: none; }
@@ -121,6 +148,7 @@ footer { padding: 40px 32px; background: var(--dark); border-top: 1px solid rgba
 .footer-divider { color: rgba(255,255,255,0.15); }
 .print-only { display: none; }
 
+@media (max-width: 1000px) and (min-width: 721px) { .videos { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 720px) {
   .nav-links { display: none; }
   .nav-toggle { display: block; }
@@ -128,6 +156,9 @@ footer { padding: 40px 32px; background: var(--dark); border-top: 1px solid rgba
   .hero { padding: 128px 24px 56px; }
   .doc { padding: 48px 24px 64px; }
   .cards { grid-template-columns: 1fr; }
+  .videos { grid-template-columns: 1fr; }
+  .nav-links.active .submenu { display: block; position: static; padding: 4px 0 0; }
+  .nav-links.active .submenu ul { background: none; border: 0; box-shadow: none; padding: 0 0 0 12px; min-width: 0; }
   .steps > li { padding: 20px 20px 20px 66px; }
   .steps > li::before { left: 18px; }
   .checklist > li { padding: 20px 20px 20px 60px; }
